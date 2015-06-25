@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head lang="ja">
+        <meta charset="UTF-8">
+        <title>Example HTML</title>
+    </head>
+    <body>
+        <h1>Example HTML</h1>
+        
+        <h2>Divice Info</h2>
+            <div>
+                <h3 onclick="getInfo('name')">name</h3>
+                <p id="name"></p>
+            </div>
+            <div>
+                <h3 onclick="getInfo('systemVersion')">systemVersion</h3>
+                <p id="systemVersion"></p>
+            </div>
+
+
+        <script>
+            
+        function getInfo(name)
+        {
+            window.location = "/getInfo/"+name;
+        }
+            
+        function showInfo(id,info){
+            document.getElementById(id).innerHTML = info;
+        }
+
+
+
+        </script>
+    </body>
+
+</html>
